@@ -10,85 +10,132 @@
     <link rel="stylesheet" href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <section class="bg-white border-bottom">
-        <div class="container-fluid">
-            <div class="row align-items-center headRow">
-                <div class="col-md">
-                    <div class="logoBox">
-                        <a href="#" class="text-warning-emphasis">UC Synthetic Data Generator</a>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ms-auto">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <div class="dropdown topDropdowns border-end pe-2 me-2">
-                                <a class="notifctnBell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>
-                                        <i class="icofont-notification text-dark"></i>
-                                        <span class="blinkBell"></span>
-                                    </span>
-                                </a>
+      <section class="bg-white border-bottom">
+          <div class="container-fluid">
+              <div class="row align-items-center headRow">
+                  <div class="col-md">
+                      <div class="logoBox">
+                          <a href="#" class="text-warning-emphasis">UC Synthetic Data Generator</a>
+                      </div>
+                  </div>
+                  <div class="col-md">
+                      <div class="ms-auto">
+                          <div class="d-flex justify-content-end align-items-center">
+                              <div class="dropdown topDropdowns border-end pe-2 me-2">
+                                  <a class="notifctnBell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <span>
+                                          <i class="icofont-notification text-dark"></i>
+                                          <span class="blinkBell"></span>
+                                      </span>
+                                  </a>
 
-                                <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown topDropdowns">
-                                <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/img/icons/profile.png" height="36" />
-                                </a>
+                                  <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
+                                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                                  </ul>
+                              </div>
+                              <div class="dropdown topDropdowns">
+                                  <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="assets/img/icons/profile.png" height="36" />
+                                  </a>
 
-                                <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mainSection">
-        <div class="sidebar shadow">
-            <div class="border-bottom pb-2 mb-2 menuSide">
-                <a href="#" class="">
-                    <img src="assets/img/icons/home.png" />
-                    <span class="menuTxt">Home</span>
-                </a>
-            </div>
-            <div class="menuSide">
-                <a href="#" class="">
-                    <img src="assets/img/icons/plug-in.png" />
-                    <span class="menuTxt">Connectors</span>
-                </a>
-                <a href="#" class="active">
-                    <img src="assets/img/icons/creative.png" />
-                    <span class="menuTxt">Generators</span>
-                </a>
-                <a href="#" class="">
-                    <img src="assets/img/icons/analysis.png" />
-                    <span class="menuTxt">Synthetic datasets</span>
-                </a>
-            </div>
-        </div>
-        <div class="contentArea">
-            <div>
-                <!--  -->
-                <div class="d-flex align-items-center border-bottom pb-2">
-                    <img src="assets/img/icons/creative.png" />
-                    <h5 class="mb-0 text-body-secondary ms-2"> New Generator</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- bootstrap@5.3.2 -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+                                  <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
+                                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="mainSection">
+          <div class="sidebar shadow">
+              <div class="border-bottom pb-2 mb-2 menuSide">
+                  <a href="#" class="">
+                      <img src="assets/img/icons/home.png" />
+                      <span class="menuTxt">Home</span>
+                  </a>
+              </div>
+              <div class="menuSide">
+                  <a href="#" class="">
+                      <img src="assets/img/icons/plug-in.png" />
+                      <span class="menuTxt">Connectors</span>
+                  </a>
+                  <a href="#" class="active">
+                      <img src="assets/img/icons/creative.png" />
+                      <span class="menuTxt">Generators</span>
+                  </a>
+                  <a href="#" class="">
+                      <img src="assets/img/icons/analysis.png" />
+                      <span class="menuTxt">Synthetic datasets</span>
+                  </a>
+              </div>
+          </div>
+          <div class="contentArea">
+              <div>
+                  <!--  -->
+                  <div class="d-flex align-items-center border-bottom pb-2">
+                      <img src="assets/img/icons/creative.png" />
+                      <h5 class="mb-0 text-body-secondary ms-2"> New Generator</h5>
+                  </div>
+                  <div class="d-flex align-items-center my-2">
+                      <span class="d-inline-block border px-3 py-0 me-2 bg-light"><small>Step 1/2</small></span><h6 class="mb-0">Data configuration</h6>
+                  </div>
+                  <div class="border mb-3 bg-white text-center rounded-2">
+                      <div class="py-5">
+                          <h6>No tables added</h6>
+                          <p>Add a table to train your Generator.</p>
+                      </div>
+                  </div>
+                  <div class="text-center">
+                      <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#addDataModal" class="btn btn-dark"><i class="icofont-plus-square"></i> Add data</a>
+                  </div>
+                  <!--  -->
+              </div>
+          </div>
+      </section>
+
+      <!-- Add Data Modal -->
+      <div class="modal fade" id="addDataModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5 d-flex align-items-center" id="exampleModalLabel">
+                          <img src="assets/img/icons/layout.png" class="me-2" /> 
+                          <span>Add data</span>
+                      </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <h6 class="mb-3">Select data source</h6>
+                      <div>
+                          <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between border rounded-3 px-3 py-4 mb-3">
+                              <div class="d-flex align-items-center">
+                                  <img src="assets/img/icons/upload.png" />
+                                  <h6 class="mb-0 ms-2 text-dark">Upload file</h6>
+                              </div>
+                              <span class=""><i class="icofont-rounded-right"></i></span>
+                          </a>
+                          <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between border rounded-3 px-3 py-4">
+                              <div class="d-flex align-items-center">
+                                  <img src="assets/img/icons/plug-in.png">
+                                  <h6 class="mb-0 ms-2 text-dark">Connect to source</h6>
+                              </div>
+                              <span class=""><i class="icofont-rounded-right"></i></span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- bootstrap@5.3.2 -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
