@@ -78,17 +78,100 @@
           <div class="contentArea">
               <div>
                   <!--  -->
-                  <div class="d-flex align-items-center border-bottom pb-2">
-                      <img src="assets/img/icons/creative.png" />
-                      <h5 class="mb-0 text-body-secondary ms-2"> New Generator</h5>
+                  <div class="d-flex align-items-center border-bottom pb-2 justify-content-between">
+                      <div class="d-flex align-items-center">
+                          <img src="assets/img/icons/creative.png" />
+                          <h5 class="mb-0 text-body-secondary ms-2"> New Generator</h5>
+                      </div>
+                      <a href="configure-model.html" class="btn btn-info btn-sm">Configure models</a>
                   </div>
                   <div class="d-flex align-items-center my-2">
                       <span class="d-inline-block border px-3 py-0 me-2 bg-light"><small>Step 1/2</small></span><h6 class="mb-0">Data configuration</h6>
                   </div>
-                  <div class="border mb-3 bg-white text-center rounded-2">
+                  <div class="border mb-3 bg-white text-center rounded-2" id="noTbl">
                       <div class="py-5">
                           <h6>No tables added</h6>
                           <p>Add a table to train your Generator.</p>
+                      </div>
+                  </div>
+                  <div class="border mb-3 bg-white rounded-2" id="Tbl" style="display:none">
+                      <div>
+                          <!-- Header row -->
+                          <div style="padding:0 2.4rem 0 1.25rem;">
+                              <div class="container-fluid border-bottom py-2 fw-bold">
+                                  <div class="row">
+                                      <div class="col">Table</div>
+                                      <div class="col">Primary key <i class="bi bi-info-circle"></i></div>
+                                      <div class="col">Foreign keys <i class="bi bi-info-circle"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                          <!-- Accordion below the header -->
+                          <div class="accordion" id="modelAccordion">
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header" id="heading1">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                          <div class="container-fluid">
+                                              <div class="row align-items-center">
+                                                  <div class="col">Customer</div>
+                                                  <div class="col">id</div>
+                                                  <div class="col">customer_id <i class="bi bi-pencil"></i></div>
+                                              </div>
+                                          </div>
+                                      </button>
+                                  </h2>
+                                  <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                      <div class="accordion-body">
+                                          <!-- Details about the table or more settings -->
+                                          You can place inputs or detailed info here.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header" id="heading2">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                          <div class="container-fluid">
+                                              <div class="row align-items-center">
+                                                  <div class="col">↳ Order</div>
+                                                  <div class="col">-</div>
+                                                  <div class="col">customer_id <i class="bi bi-pencil"></i></div>
+                                              </div>
+                                          </div>
+                                      </button>
+                                  </h2>
+                                  <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                      <div class="accordion-body">
+                                          <!-- Details about the table or more settings -->
+                                          You can place inputs or detailed info here.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header" id="heading3">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                          <div class="container-fluid">
+                                              <div class="row align-items-center">
+                                                  <div class="col">↳ OrderLineItem</div>
+                                                  <div class="col">-</div>
+                                                  <div class="col">
+                                                      <a class="d-inline-block bg-light rounded-4 border border-dark-subtle px-3 py-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                                          <i class="icofont-pencil-alt-5"></i>
+                                                      </a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </button>
+                                  </h2>
+                                  <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                      <div class="accordion-body">
+                                          <!-- Details about the table or more settings -->
+                                          You can place inputs or detailed info here.
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
                   </div>
                   <div class="text-center">
@@ -98,22 +181,46 @@
               </div>
           </div>
       </section>
-
+      <!-- Add Key -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Foreign keys for table "OrderLineItem"</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div>
+                  <table class="table table-bordered">
+                      <tr>
+                          <td>Foreign key</td>
+                          <td>Referenced table</td>
+                          <td>Referenced primary key</td>
+                          <td>Is context?</td>
+                      </tr>
+                      <tr>
+                          <td colspan="4" align="center">No foreign key defined</td>
+                      </tr>
+                  </table>
+                  <div class="text-center mt-3 mb-2">
+                      <a href="#" class="btn btn-info btn-sm"><i class="icofont-plus"></i> Add foreign key</a>
+                  </div>
+              </div>
+          </div>
+      </div>
       <!-- Add Data Modal -->
       <div class="modal fade" id="addDataModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
                       <h1 class="modal-title fs-5 d-flex align-items-center" id="exampleModalLabel">
-                          <img src="assets/img/icons/layout.png" class="me-2" /> 
+                          <img src="assets/img/icons/layout.png" class="me-2" />
                           <span>Add data</span>
                       </h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                      <h6 class="mb-3">Select data source</h6>
+                      <h6 class="mb-3 text-body-secondary">Select data source</h6>
                       <div>
-                          <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between border rounded-3 px-3 py-4 mb-3">
+                          <a href="javascript:void(0)" onclick="uploadFunShow()" class="d-flex align-items-center justify-content-between border rounded-3 px-3 py-4 mb-3">
                               <div class="d-flex align-items-center">
                                   <img src="assets/img/icons/upload.png" />
                                   <h6 class="mb-0 ms-2 text-dark">Upload file</h6>
@@ -132,10 +239,58 @@
               </div>
           </div>
       </div>
+
+      <!-- upload Data Modal -->
+      <div class="modal fade" id="uploadDataModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title fs-5 d-flex align-items-center" id="exampleModalLabel">
+                          <img src="assets/img/icons/layout.png" class="me-2" />
+                          <span>Add data</span>
+                      </h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <h6 class="mb-3 text-body-secondary">Upload file</h6>
+                      <div>
+                          <div class="file-upload-box d-flex align-items-center justify-content-center text-center flex-column border border-2 border-dashed rounded-3 p-4" style="width: 100%; max-width: 400px; margin: 2rem auto; cursor: pointer;">
+                              <div class="upload-icon mb-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ccc" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-5.481 6.089 4.5 4.5 0 1 0 5.452 6.902h3.528A3.5 3.5 0 1 0 13 6.5h-.035A5.53 5.53 0 0 0 8 0ZM7.646 9.854a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.207V14.5a.5.5 0 0 1-1 0v-3.293L6.354 12.56a.5.5 0 1 1-.708-.708l2-2Z" />
+                                  </svg>
+                              </div>
+                              <div class="upload-text">
+                                  <p class="mb-1 text-muted">Drag a file here or click to browse</p>
+                                  <small class="text-muted">CSV, TSV, and Parquet files are supported.</small>
+                              </div>
+                              <input type="file" class="d-none" id="fileInput">
+                          </div>
+
+                          <div class="text-center">
+                              <a href="javascript:void()" onclick="uploadFunHide()" class="btn btn-info">Proceed</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <!-- bootstrap@5.3.2 -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
       <script src="assets/js/bootstrap.min.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <!--<script src="assets/js/bootstrap.bundle.min.js"></script>-->
+      <script>
+          function uploadFunShow() {
+              $("#addDataModal").modal('hide');
+              $("#uploadDataModal").modal('show');
+          }
+          function uploadFunHide() {
+              $("#uploadDataModal").modal('hide');
+              $("#noTbl").hide();
+              $("#Tbl").show();
+          }
+      </script>
   </body>
 </html>

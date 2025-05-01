@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- bootstrap@5.3.2 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/icofont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="bg-white border-bottom">
+        <div class="container-fluid">
+            <div class="row align-items-center headRow">
+                <div class="col-md">
+                    <div class="logoBox">
+                        <a href="#" class="text-warning-emphasis">UC Synthetic Data Generator</a>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ms-auto">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div class="dropdown topDropdowns border-end pe-2 me-2">
+                                <a class="notifctnBell" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>
+                                        <i class="icofont-notification text-dark"></i>
+                                        <span class="blinkBell"></span>
+                                    </span>
+                                </a>
+
+                                <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown topDropdowns">
+                                <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/img/icons/profile.png" height="36" />
+                                </a>
+
+                                <ul class="dropdown-menu bg-light shadow dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mainSection">
+        <div class="sidebar shadow">
+            <div class="border-bottom pb-2 mb-2 menuSide">
+                <a href="#" class="">
+                    <img src="assets/img/icons/home.png" />
+                    <span class="menuTxt">Home</span>
+                </a>
+            </div>
+            <div class="menuSide">
+                <a href="#" class="">
+                    <img src="assets/img/icons/plug-in.png" />
+                    <span class="menuTxt">Connectors</span>
+                </a>
+                <a href="#" class="active">
+                    <img src="assets/img/icons/creative.png" />
+                    <span class="menuTxt">Generators</span>
+                </a>
+                <a href="#" class="">
+                    <img src="assets/img/icons/analysis.png" />
+                    <span class="menuTxt">Synthetic datasets</span>
+                </a>
+            </div>
+        </div>
+        <div class="contentArea">
+            <div>
+                <!--  -->
+                <div class="d-flex align-items-center border-bottom pb-2 justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/img/icons/creative.png" />
+                        <h5 class="mb-0 text-body-secondary ms-2"> New Generator</h5>
+                    </div>
+                    <a href="start-training.html" class="btn btn-info btn-sm">Start training</a>
+                </div>
+                <div class="d-flex align-items-center my-2 justify-content-between">
+                    <div class="d-flex align-items-center my-2">
+                        <span class="d-inline-block border px-3 py-0 me-2 bg-light"><small>Step 1/2</small></span><h6 class="mb-0">Data configuration</h6>
+                    </div>
+                    <div>
+                        <a href="#" class="d-inline-block border border-dark-subtle rounded-2 px-2 py-1 text-dark">Accuracy</a>
+                        <a href="#" class="d-inline-block border border-dark-subtle rounded-2 px-2 py-1 text-dark mx-2">Speed</a>
+                        <a href="#" class="d-inline-block border border-dark-subtle rounded-2 px-2 py-1 text-dark">Turbo</a>
+                    </div>
+                </div>
+                
+                <div class="border mb-3 bg-white rounded-2" id="Tbl">
+                    <div>
+                        <!-- Header row -->
+                        <div style="padding:0 2.4rem 0 1.25rem;">
+                            <div class="container-fluid border-bottom py-2 fw-bold">
+                                <div class="row">
+                                    <div class="col">Model</div>
+                                    <div class="col">Table type <i class="bi bi-info-circle"></i></div>
+                                    <div class="col">Max sample size <i class="bi bi-info-circle"></i></div>
+                                    <div class="col">Max training time <i class="bi bi-info-circle"></i></div>
+                                    <div class="col">Max sequence window <i class="bi bi-info-circle"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Accordion below the header -->
+                        <div class="accordion" id="modelAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        <div class="container-fluid">
+                                            <div class="row align-items-center">
+                                                <div class="col">Customer</div>
+                                                <div class="col">Subject</div>
+                                                <div class="col">1,000 rows</div>
+                                                <div class="col">1 min</div>
+                                                <div class="col"></div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Models</label>
+                                                    <input type="text" class="form-control" value="Customer" readonly>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Table type</label>
+                                                    <input type="text" class="form-control" value="Subject" readonly>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Max sample size</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" value="1,000">
+                                                        <span class="input-group-text">rows</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Max training time</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" value="1">
+                                                        <span class="input-group-text">min</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Max sequence window</label>
+                                                    <input type="text" class="form-control" value="-" readonly>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Max training epochs</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" value="100">
+                                                        <span class="input-group-text">epochs</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Model size</label>
+                                                    <select class="form-select">
+                                                        <option selected>Small</option>
+                                                        <option>Medium</option>
+                                                        <option>Large</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Batch size</label>
+                                                    <select class="form-select">
+                                                        <option selected>Auto</option>
+                                                        <option>Manual</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Flexible generation</label>
+                                                    <div class="btn-group w-100">
+                                                        <input type="radio" class="btn-check" name="flexGen" id="flexOn" checked>
+                                                        <label class="btn btn-outline-primary" for="flexOn">On</label>
+
+                                                        <input type="radio" class="btn-check" name="flexGen" id="flexOff">
+                                                        <label class="btn btn-outline-primary" for="flexOff">Off</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Value protection</label>
+                                                    <div class="btn-group w-100">
+                                                        <input type="radio" class="btn-check" name="valProtect" id="vpOn" checked>
+                                                        <label class="btn btn-outline-primary" for="vpOn">On</label>
+
+                                                        <input type="radio" class="btn-check" name="valProtect" id="vpOff">
+                                                        <label class="btn btn-outline-primary" for="vpOff">Off</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label class="label-sm">Rare category replacement</label>
+                                                    <select class="form-select">
+                                                        <option selected>Constant</option>
+                                                        <option>Mode</option>
+                                                        <option>Random</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        <div class="container-fluid">
+                                            <div class="row align-items-center">
+                                                <div class="col">↳ Order</div>
+                                                <div class="col">Linked</div>
+                                                <div class="col">100%</div>
+                                                <div class="col">1 min</div>
+                                                <div class="col">4 rows</div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                    <div class="accordion-body">
+                                        <!-- Details about the table or more settings -->
+                                        You can place inputs or detailed info here.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        <div class="container-fluid">
+                                            <div class="row align-items-center">
+                                                <div class="col">↳ OrderLineItem</div>
+                                                <div class="col">Linked</div>
+                                                <div class="col">100%</div>
+                                                <div class="col">1 min</div>
+                                                <div class="col">4 rows</div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#modelAccordion">
+                                    <div class="accordion-body">
+                                        <!-- Details about the table or more settings -->
+                                        You can place inputs or detailed info here.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#addDataModal" class="btn btn-dark"><i class="icofont-plus-square"></i> Add data</a>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- bootstrap@5.3.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--<script src="assets/js/bootstrap.bundle.min.js"></script>-->
+    
+</body>
+</html>
